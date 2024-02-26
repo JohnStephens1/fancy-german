@@ -1,0 +1,52 @@
+// based on a keyboard map from an 'xkb/symbols/de' file
+
+default
+xkb_symbols "basic" {
+
+    include "latin(type4)"
+
+    name[Group1]="fancy_german_v5";
+
+    key <AE02>	{ [         2,   quotedbl,  twosuperior,    oneeighth ]	};
+    key <AE03>	{ [         3,    section, threesuperior,    sterling ]	};
+    key <AE04>	{ [         4,     dollar,   onequarter,     currency ]	};
+
+    key <AE11> {type[Group1]="FOUR_LEVEL_PLUS_LOCK",  symbols[Group1]=
+                  [ssharp, question, backslash, questiondown, 0x1001E9E ]};
+    key <AE12>	{ [dead_acute, dead_grave, dead_cedilla,  dead_ogonek ]	};
+
+    key <AD03>	{ [         e,          E,     EuroSign,     EuroSign ]	};
+    key <AD06>	{ [         z,          Z,    leftarrow,          yen ]	};
+
+    key <AC02>  { [         s,          S,                U017F,     U1E9E    ] };
+    key <AC07>  { [         j,          J,        dead_belowdot, dead_abovedot   ] };
+    key <TLDE>	{ [dead_circumflex, degree,	U2032,    U2033	] };
+
+    key <BKSL>	{ [numbersign, apostrophe, rightsinglequotemark,   dead_breve ]	};
+    key <AB01>	{ [         y,          Y,       guillemotright,    U203A 	] };
+    key <AB02>	{ [         x,          X,        guillemotleft,    U2039 	] };
+    key <AB04>	{ [         v,          V,   doublelowquotemark, singlelowquotemark ]	};
+    key <AB05>	{ [         b,          B,  leftdoublequotemark, leftsinglequotemark ] };
+    key <AB06>	{ [         n,          N, rightdoublequotemark, rightsinglequotemark ]	};
+    key <LSGT>	{ [     less,     greater,                  bar, dead_belowmacron ] };
+    
+    key <AC01>  { [         a,          A,                adiaeresis,     Adiaeresis    ] };
+    key <AD07>  { [         u,          U,                udiaeresis,     Udiaeresis    ] };
+    key <AD09>  { [         o,          O,                odiaeresis,     Odiaeresis    ] };
+    
+    key <AD11>  { [         apostrophe,          asterisk,                VoidSymbol,     VoidSymbol    ] };
+    key <AD12>  { [         numbersign,          slash,                asciitilde,     backslash    ] };
+    
+    key <AC10>  { [         underscore,          equal,                slash,     backslash    ] };
+    key <AC11>  { [         parenleft,          bracketleft,                braceleft,     VoidSymbol    ] };
+    key <AC12>  { [         parenright,          bracketright,                braceright,     VoidSymbol    ] };
+    
+    key <AB08>  { [         comma,          semicolon,                question,     VoidSymbol    ] };
+    key <AB09>  { [         dot,          colon,                less,     VoidSymbol    ] };
+    key <AB10>  { [         minus,          plus,                greater,     VoidSymbol    ] };
+    
+
+    include "kpdl(comma)"
+
+    include "level3(ralt_switch)"
+};
