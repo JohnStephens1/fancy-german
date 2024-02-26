@@ -35,6 +35,8 @@ Below are images showing what each key corresponds to while holding their respec
 
 ### How to install
 
+#### Windows
+
 Simply run `setup.exe` in the `fncygrm5` directory. After a restart, you should be able to switch to it using the normal windows-space or shift-alt combinations.
 I would recommend setting `fancy_german` as your default keyboard layout, since switching is cumbersome, annoying and fairly pointless, since this is the objectively superior keyboard layout (surely).
 
@@ -46,5 +48,29 @@ The installer should automatically add the keyboard layout to your list once you
 4. (Optional) Finally, remove your old keyboard layout by clicking on it, then selecting the `Remove` option.
 
 I have also included the fancy_german_v5.klc file for anyone who wants to modify this keyboard layout to suit their own needs. Just be warned that the official software required to create and modify custom keyboard layouts is very outdated, clunky and a bit buggy. It's appropriately called `Microsoft Keyboard Layout Creator (MSKLC)`.
+
+#### Linux
+
+1. Download the Linux release and unpack it.
+1. Place `fancy_german_v5` file into the `/usr/share/X11/xkb/symbols` directory.
+2. Open `evdev.xml` located in `/usr/share/X11/xkb/rules` using `sudo gedit evdev.xml`.
+3. Search for `/layoutList`. Right above that insert the following code block so that the indentations match:.
+
+```
+    <layout>
+      <configItem>
+        <name>fancy_german_v5</name>
+        <shortDescription>fancy_german_v5</shortDescription>
+        <description>fancy_german_v5</description>
+        <languageList>
+          <iso639Id>fancy_german_v5</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+      </variantList>
+    </layout>
+```
+
+You can test if everything works by typing `setxkbmap -layout fancy_german_v5` into the console.
 
 #### Enjoy!
