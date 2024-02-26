@@ -54,7 +54,7 @@ I have also included the fancy_german_v5.klc file for anyone who wants to modify
 1. Download the Linux release and unpack it.
 1. Place `fancy_german_v5` file into the `/usr/share/X11/xkb/symbols` directory.
 2. Open `evdev.xml` located in `/usr/share/X11/xkb/rules` using `sudo gedit evdev.xml`.
-3. Search for `/layoutList`. Right above that insert the following code block so that the indentations match:.
+3. Search for `/layoutList`. Right above that insert the following code block so that the indentations match:
 
 ```
     <layout>
